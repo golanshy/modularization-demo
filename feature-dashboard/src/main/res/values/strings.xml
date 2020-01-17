@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Modularization demo</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="title_home">Home</string>
+    <string name="title_back">Back</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="home_first">This is our camera</string>
+    <string name="home_second">How about our wall mounted version?</string>
+    <string name="dashboard_fragment">This is the dashboard Fragment</string>
+    <string name="notifications_fragment">This is the notifications Fragment</string>
+    <string name="buy_now">Buy now</string>
+</resources>
