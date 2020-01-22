@@ -6,16 +6,6 @@ import uk.co.applylogic.modularization.navigation.base.BaseNavigator
 import uk.co.applylogic.modularization.navigation.di.NavigationComponent
 import uk.co.applylogic.modularization.navigation.features.*
 
-/**
- * This class holds the navController for any feature through [BaseNavigator]
- * It is injected through [uk.co.applylogic.modularization.injection.CoreComponent],
- * so no need to create it in every feature component.
- *
- * When injected, it can be referenced as any feature Navigator,
- * because it contains all interfaces through [NavigationComponent],
- * but it needs to be exposed from the component,
- * like e.g. [uk.co.applylogic.modularization.onboarding.di.OnboardingComponent.navigator].
- */
 internal class Navigator : BaseNavigator(),
     OnboardingNavigator,
     DashboardNavigator,
