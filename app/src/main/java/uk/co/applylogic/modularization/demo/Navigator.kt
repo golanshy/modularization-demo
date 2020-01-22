@@ -80,15 +80,15 @@ internal class Navigator : BaseNavigator(),
     //region dashboard
 
     override fun dashboardToA() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureAActivity)
     }
 
     override fun dashboardToB() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureBActivity)
     }
 
     override fun dashboardToC() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureCActivity)
     }
 
     override fun dashboardToPasscode() {
@@ -104,11 +104,13 @@ internal class Navigator : BaseNavigator(),
     }
 
     override fun aToB(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureBActivity)
+        activity?.finish()
     }
 
     override fun aToC(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureCActivity)
+        activity?.finish()
     }
 
     //endregion
@@ -120,11 +122,13 @@ internal class Navigator : BaseNavigator(),
     }
 
     override fun bToA(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureAActivity)
+        activity?.finish()
     }
 
     override fun bToC(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureCActivity)
+        activity?.finish()
     }
 
     //endregion
@@ -136,11 +140,13 @@ internal class Navigator : BaseNavigator(),
     }
 
     override fun cToA(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureAActivity)
+        activity?.finish()
     }
 
     override fun cToB(activity: FragmentActivity?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navController?.navigate(R.id.action_global_featureBActivity)
+        activity?.finish()
     }
 
     //endregion

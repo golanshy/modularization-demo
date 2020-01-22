@@ -3,7 +3,7 @@
     package="uk.co.applylogic.modularization.feature_a">
 
     <application>
-        <activity android:name=".BuyNowActivity"></activity>
+        <activity android:name=".FeatureAActivity"></activity>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
-import uk.co.applylogic.modularization.dashboard.MainActivity
+import uk.co.applylogic.modularization.dashboard.DashboardActivity
 import uk.co.applylogic.modularization.dashboard.R
 import uk.co.applylogic.modularization.dashboard.databinding.FragmentHomeBinding
 
@@ -31,11 +31,11 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        homeViewModel.comp = (activity as MainActivity).comp
+        homeViewModel.comp = (activity as DashboardActivity).comp
 
         binding.lifecycleOwner = this
         binding.fragment = this
-        binding.viewModel = homeViewModel
+        binding.activity = activity as DashboardActivity
     }
 
     fun onNextClicked() {
@@ -45,6 +45,6 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        homeViewModel.text.value = getString(R.string.home_first)
+        homeViewModel.text.value = "${getString(R.string.home_fragment)}\n${getString(R.string.home_first)}"
     }
 }

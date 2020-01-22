@@ -1,1 +1,5 @@
-<resources></resources>
+<resources>
+    <string name="featurebfragment">Feature B Fragment</string>
+    <string name="feature_a">Navigate to Feature A</string>
+    <string name="feature_c">Navigate to Feature C</string>
+</resources>

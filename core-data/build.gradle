@@ -17,10 +17,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
-
-        buildConfigField 'String', 'MARVEL_API_URL', MARVEL_API_URL
-        buildConfigField 'String', 'MARVEL_PUBLIC_API_KEY', MARVEL_PUBLIC_API_KEY
-        buildConfigField 'String', 'MARVEL_PRIVATE_API_KEY', MARVEL_PRIVATE_API_KEY
     }
 
     buildTypes {

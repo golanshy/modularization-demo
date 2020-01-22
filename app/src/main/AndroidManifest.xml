@@ -14,14 +14,22 @@
         android:theme="@style/AppTheme"
         android:name=".MyApplication">
         <activity
-            android:name="uk.co.applylogic.modularization.dashboard.MainActivity"
+            android:name="uk.co.applylogic.modularization.dashboard.DashboardActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <nav-graph android:value="@navigation/global_dashboard_navigation_graph" />
+
         </activity>
+
+        <activity android:name="uk.co.applylogic.modularization.feature_a.FeatureAActivity"/>
+        <activity android:name="uk.co.applylogic.modularization.feature_b.FeatureBActivity"/>
+        <activity android:name="uk.co.applylogic.modularization.feature_c.FeatureCActivity"/>
+
     </application>
 
 </manifest>

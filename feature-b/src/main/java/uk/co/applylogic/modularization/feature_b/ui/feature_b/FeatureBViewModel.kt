@@ -1,4 +1,4 @@
-package uk.co.applylogic.modularization.feature_b.ui.featureb
+package uk.co.applylogic.modularization.feature_b.ui.feature_b
 
 import androidx.lifecycle.ViewModel
 

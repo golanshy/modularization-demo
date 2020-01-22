@@ -1,18 +1,25 @@
 <resources>
     <string name="app_name">Modularization demo</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
-    <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="complete">Complete</string>
     <string name="title_home">Home</string>
     <string name="title_back">Back</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="home_first">This is our camera</string>
-    <string name="home_second">How about our wall mounted version?</string>
-    <string name="dashboard_fragment">This is the dashboard Fragment</string>
-    <string name="notifications_fragment">This is the notifications Fragment</string>
+    <string name="home_fragment">This is the Home fragment</string>
+    <string name="dashboard_fragment">This is the Dashboard fragment</string>
+    <string name="notifications_fragment">This is the Notifications fragment</string>
+
+    <string name="home_first">1st page</string>
+    <string name="home_second">Buy now</string>
+    <string name="home_third">Confirm payment</string>
+    <string name="home_fourth">Payment confirmation</string>
+
+    <string name="deep_navigation">Deep navigation - Purchase journey</string>
     <string name="buy_now">Buy now</string>
+    <string name="confirm_payment">Confirm payment</string>
+
+    <string name="feature_a">Navigate to feature A</string>
+    <string name="feature_b">Navigate to feature B</string>
+    <string name="feature_c">Navigate to feature C</string>
 </resources>

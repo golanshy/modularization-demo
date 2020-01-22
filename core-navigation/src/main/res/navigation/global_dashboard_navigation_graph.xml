@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/global_dashboard_navigation_graph"
+    app:startDestination="@+id/navigation_home">
+
+    <activity
+        android:id="@+id/featureAActivity"
+        android:name="uk.co.applylogic.modularization.feature_a.FeatureAActivity"
+        android:label="FeatureAActivity" />
+    <activity
+        android:id="@+id/featureCActivity"
+        android:name="uk.co.applylogic.modularization.feature_c.FeatureCActivity"
+        android:label="FeatureCActivity" />
+    <activity
+        android:id="@+id/featureBActivity"
+        android:name="uk.co.applylogic.modularization.feature_b.FeatureBActivity"
+        android:label="FeatureBActivity" />
+    <action
+        android:id="@+id/action_global_featureAActivity"
+        app:destination="@id/featureAActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_featureBActivity"
+        app:destination="@id/featureBActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_featureCActivity"
+        app:destination="@id/featureCActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/navigation_home_second"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home_second"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.home.HomeSecondFragment"
+        android:label="@string/title_back"
+        tools:layout="@layout/fragment_home_second" >
+        <action
+            android:id="@+id/action_navigation_home_second_to_navigation_home_third"
+            app:destination="@id/navigation_home_third"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home_third"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.home.HomeThirdFragment"
+        android:label="@string/title_back"
+        tools:layout="@layout/fragment_home_third">
+        <action
+            android:id="@+id/action_navigation_home_third_to_navigation_home_fourth"
+            app:destination="@id/navigation_home_fourth"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home_fourth"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.home.HomeFourthFragment"
+        android:label="@string/complete"
+        tools:layout="@layout/fragment_home_fourth">
+        <action
+            android:id="@+id/action_navigation_home_fourth_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="uk.co.applylogic.modularization.dashboard.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+</navigation>

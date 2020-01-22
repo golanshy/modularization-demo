@@ -1,1 +1,5 @@
-<resources></resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="featurecfragment" >Feature C Fragment</string>
+    <string name="feature_a">Navigate to Feature A</string>
+    <string name="feature_b">Navigate to Feature B</string>
+</resources>

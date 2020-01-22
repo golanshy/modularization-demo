@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/global_dashboard_navigation_graph"
+    app:startDestination="@+id/navigation_home">
+
+    <activity
+        android:id="@+id/featureAActivity"
+        android:name="uk.co.applylogic.modularization.feature_a.FeatureAActivity"
+        android:label="FeatureAActivity" />
+    <activity
+        android:id="@+id/featureCActivity"
+        android:name="uk.co.applylogic.modularization.feature_c.FeatureCActivity"
+        android:label="FeatureCActivity" />
+    <activity
+        android:id="@+id/featureBActivity"
+        android:name="uk.co.applylogic.modularization.feature_b.FeatureBActivity"
+        android:label="FeatureBActivity" />
+    <action
+        android:id="@+id/action_global_featureAActivity"
+        app:destination="@id/featureAActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_featureBActivity"
+        app:destination="@id/featureBActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_featureCActivity"
+        app:destination="@id/featureCActivity"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="uk.co.applylogic.modularization.feature_a.ui.feature_a.FeatureAFragment"
+        android:label="@string/featureafragment"
+        tools:layout="@layout/feature_a_fragment"/>
+
+</navigation>

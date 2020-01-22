@@ -11,6 +11,6 @@ class HomeViewModel() : ViewModel() {
     val text: MutableLiveData<String?>  = MutableLiveData(null)
 
     fun onBuyClicked() {
-
+        comp.navigator()
     }
 }

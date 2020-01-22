@@ -10,6 +10,7 @@ import uk.co.applylogic.modularization.android.handler.NetworkErrorHandlerInterf
 import uk.co.applylogic.modularization.data.repository.ContentInterface
 import uk.co.applylogic.modularization.data.repository.ContentRepositoryContract
 import uk.co.applylogic.modularization.navigation.di.NavigationComponent
+import uk.co.applylogic.modularization.navigation.features.*
 
 import javax.inject.Singleton
 
@@ -29,4 +30,14 @@ interface CoreComponent {
 	fun contentInterface(): ContentInterface
 
 	fun networkErrorHandler(): NetworkErrorHandlerInterface
+
+	fun onboardingNavigator(): OnboardingNavigator
+
+	fun dashboardNavigator(): DashboardNavigator
+
+	fun featureANavigator(): FeatureANavigator
+
+	fun featureBNavigator(): FeatureBNavigator
+
+	fun featureCNavigator(): FeatureCNavigator
 }

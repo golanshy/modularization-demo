@@ -28,6 +28,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 const val TEN_MB: Long = 10 * 1024 * 1024
+const val BASE_URL: String = "https//api.your-domain.com"
 
 @Module
 class NetworkModule(val context: Context) {
@@ -61,7 +62,7 @@ class NetworkModule(val context: Context) {
     @ContentRetrofit
     fun provideRetrofit(@UnauthorizedOkHttpClient okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.MARVEL_API_URL)
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

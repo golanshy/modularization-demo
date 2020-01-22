@@ -7,12 +7,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
-import uk.co.applylogic.modularization.dashboard.R
 import uk.co.applylogic.modularization.dashboard.di.DaggerDashboardComponent
 import uk.co.applylogic.modularization.dashboard.di.DashboardComponent
 import uk.co.applylogic.modularization.injection.CoreInjectHelper
 
-class MainActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
 
     internal lateinit var comp: DashboardComponent
 
@@ -26,13 +25,19 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         comp.injectActivity(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         val navController = findNavController(R.id.nav_host_fragment)
+        comp.navigator().bind(navController)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_home_fourth
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

@@ -4,15 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import uk.co.applylogic.modularization.dashboard.MainActivity
+import uk.co.applylogic.modularization.dashboard.DashboardActivity
 import uk.co.applylogic.modularization.dashboard.R
 import uk.co.applylogic.modularization.dashboard.databinding.FragmentDashboardBinding
-import uk.co.applylogic.modularization.dashboard.ui.notifications.NotificationsViewModel
 
 class DashboardFragment : Fragment() {
 
@@ -33,7 +30,7 @@ class DashboardFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         dashboardViewModel = ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        dashboardViewModel.comp = (activity as MainActivity).comp
+        dashboardViewModel.comp = (activity as DashboardActivity).comp
 
         binding.lifecycleOwner = this
         binding.fragment = this
