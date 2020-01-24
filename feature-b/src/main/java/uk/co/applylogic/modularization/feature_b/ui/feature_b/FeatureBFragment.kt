@@ -1,16 +1,15 @@
 package uk.co.applylogic.modularization.feature_b.ui.feature_b
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import uk.co.applylogic.modularization.feature_b.FeatureBActivity
 import uk.co.applylogic.modularization.feature_b.R
 import uk.co.applylogic.modularization.feature_b.databinding.FeatureBFragmentBinding
-import uk.co.applylogic.modularization.feature_b.databinding.FeatureBFragmentBindingImpl
 
 class FeatureBFragment : Fragment() {
 
@@ -30,7 +29,7 @@ class FeatureBFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(FeatureBViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(FeatureBViewModel::class.java)
 
         binding.lifecycleOwner = this
         binding.activity = activity as FeatureBActivity

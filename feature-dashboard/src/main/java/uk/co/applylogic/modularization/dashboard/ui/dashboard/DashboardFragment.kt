@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import uk.co.applylogic.modularization.dashboard.DashboardActivity
 import uk.co.applylogic.modularization.dashboard.R
 import uk.co.applylogic.modularization.dashboard.databinding.FragmentDashboardBinding
@@ -29,7 +29,7 @@ class DashboardFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        dashboardViewModel = ViewModelProviders.of(this).get(DashboardViewModel::class.java)
+        dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
         dashboardViewModel.comp = (activity as DashboardActivity).comp
 
         binding.lifecycleOwner = this
