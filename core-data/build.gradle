@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation project(":buildSrc")
+//    implementation project(":buildSrc")
     implementation project(":core-android")
 
     api Libs.AndroidX.multiDex
