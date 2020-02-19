@@ -14,7 +14,6 @@ import uk.co.applylogic.modularization.navigation.features.*
 
 import javax.inject.Singleton
 
-
 @Singleton
 @Component(modules = [ApplicationModule::class, NetworkModule::class],
 		dependencies = [NavigationComponent::class])
