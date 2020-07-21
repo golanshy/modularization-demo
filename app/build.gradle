@@ -5,8 +5,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
-apply plugin: 'io.fabric'
-apply plugin: 'com.google.firebase.firebase-perf'
+//apply plugin: 'io.fabric'
+//apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -91,7 +91,7 @@ dependencies {
     androidTestImplementation Libs.AndroidX.Test.Espresso.core
 
 }
-apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+//apply plugin: 'com.google.gms.google-services'  // Google Services plugin
 
 sourceCompatibility = "8"
 targetCompatibility = "8"
